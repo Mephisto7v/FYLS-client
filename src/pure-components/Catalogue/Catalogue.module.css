@@ -1,0 +1,80 @@
+.GridCard{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.CardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10%;
+    transition: all 0.2s ease-in;
+    position: relative;
+    z-index: 2;
+}
+
+.CardContainer:hover{
+    transform: scale(1.1);
+    background-color: #b8b8b8;
+    z-index: 3;
+    box-shadow: 
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.ImgProduct{
+    width: 15rem;
+    height: auto;
+}
+
+.ProductName{
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 0.2rem;
+}
+
+.ProductPrice{
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.ProductStock{
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.AddCart{
+    position: absolute;
+    top : 20px;
+    right: 20px;
+}
+
+.GoTo{
+    color: white;
+    background-color: black;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.GoTo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

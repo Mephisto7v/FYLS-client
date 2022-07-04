@@ -1,0 +1,31 @@
+.DownContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: black solid 3px;
+    height: 30vh;
+}
+
+.MiddleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+    
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.SocialMedia{
+    width: 33.333%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 17px;
+    padding: 40px;
+}

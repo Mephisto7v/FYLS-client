@@ -1,0 +1,72 @@
+.Container{
+    width : 90%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.LeftContainer{
+    width: 45%;
+}
+
+.ProductIMG{
+    width: 100%;
+}
+
+.RightContainer{
+    width: 50%;
+    border-left: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.RightTopContainer{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.RightBottomContainer{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.AddToCart{
+    padding : 20px;
+    background-color: black;
+    color:white;
+    transition: all 0.7s ease;
+}
+
+.AddToCart:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}
+
+.ProductName{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.ProductDescription{
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.ProductStock{
+    padding-top: 40px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.ProductPrice{
+    font-size: 40px;
+    font-weight: 600;
+}
