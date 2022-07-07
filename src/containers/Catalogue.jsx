@@ -11,6 +11,12 @@ const Catalogue = () => {
 
     const[products, setProducts] = useState([]);
 
+    const {
+        state : {cart},
+        dispatch,
+    } = CartState();
+    
+
     useEffect(() => {
         Axios.get("http://localhost:3001/api/getProduct").then((response) => {
         setProducts(response.data);
@@ -29,11 +35,15 @@ const Catalogue = () => {
                 {
                     products && products.map(field => {
                         const img = require('../assets/'+ field.ProductImage);
+                        let stock;
+                        const element = cart.find(element => element.ProductID === field.ProductID);
+                        if(element) stock = (field.ProductStock-element.qty)
+                        else stock = (field.ProductStock)
                      return <CardContainer key={field.ProductID}>
                             <ImgProduct path={img}></ImgProduct>
                             <ProductName>{field.ProductName}</ProductName>
                             <ProductPrice>{field.ProductPrice} €</ProductPrice>
-                            <ProductStock>Il reste {field.ProductStock} article{field.ProductStock>1 ? 's' : null}</ProductStock>
+                            <ProductStock>Il reste {stock} article{stock>1 ? 's' : null}</ProductStock>
                             <GoTo onClick={() => goToPage(field)}></GoTo>
                     </CardContainer>
                     })

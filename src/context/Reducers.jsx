@@ -16,6 +16,7 @@ export const cartReducer = (state, action) => {
         }
     }
     else if(action.type === "RemoveCart"){
+        console.log(state.cart.filter((c)=>c.ProductID !== action.payload.ProductID));
         return{
             ...state,
             cart:state.cart.filter((c)=>c.ProductID !== action.payload.ProductID)

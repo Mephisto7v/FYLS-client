@@ -35,11 +35,6 @@ const formData = [
         text: "Adresse",
         type: "text",
         key: "adresse"
-    },
-    {
-        text: "Admin",
-        type: "checkbox",
-        key: "admin"
     }
 ]
 

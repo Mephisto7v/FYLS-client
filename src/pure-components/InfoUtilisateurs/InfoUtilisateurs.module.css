@@ -1,0 +1,43 @@
+.Container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserInfo{
+    width: 100%;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 40px;
+    margin : 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nom{
+    width : 20%;
+    text-align: center;
+}
+
+.prenom{
+    width : 20%;
+    text-align: center;
+}
+
+.email{
+    width : 20%;
+    text-align: center;
+}
+
+.ville{
+    width : 20%;
+    text-align: center;
+}
+.BtnSupprimer{
+    text-align: center;
+    width: 20%;
+    cursor: pointer;
+}

@@ -3,6 +3,7 @@ import Background from '../pure-components/Background/Background'
 import { NavBar } from '../pure-components/NavBar/NavBar'
 import {FormContainer, Input, InputImg, Button, RightForm, LeftForm, LabelForm, DisplayImg} from '../pure-components/AjoutPaire/AjoutPaire'
 import Axios from 'axios';
+import { AdministrationButtons } from '../pure-components/AdministrationButtons/AdministrationButtons';
 
 const formData = [
     {
@@ -34,15 +35,21 @@ const AjoutBien = () => {
     const [verif, setVerif] = useState("")
 
     const submitData = async () => {
-		Axios.post("http://localhost:3001/api/insertBien", {
+		Axios.post("http://localhost:3001/api/insertProduit", {
         data : data, file : fileName
         }).then((response) => {
-            setVerif(response.data);
+            if(response.data[0]){
+                setVerif("La paire de chaussures a été ajoutée avec succès");
+            }
+            else{
+                setVerif(response.data);
+            }
         })
     }
     
     return <Background>    
         <NavBar></NavBar>
+        <AdministrationButtons active={1}></AdministrationButtons>
             <FormContainer>
                 <LeftForm>
                     {

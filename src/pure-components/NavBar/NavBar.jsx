@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './NavBar.module.css'
 import { Link } from 'react-router-dom'
 import panier from '../../assets/panier.png'
+import { useNavigate } from 'react-router-dom'
 import { CartState } from '../../context/Context'
 
 const Container = ({children}) => {
@@ -50,10 +51,13 @@ const LogContainer = ({children}) =>{
 </div>
 }
 const NavBar = () => {
+    const navigate = useNavigate();
+
     const logout = () => {
         localStorage.removeItem('User');
         localStorage.removeItem('Admin');
         localStorage.removeItem('Name');
+        navigate('/');
         window.location.reload(false);
     }
 
@@ -80,26 +84,15 @@ const NavBar = () => {
             </Link>
             {localStorage.getItem('Admin') == 1 ? 
             <Link to = '/AjoutSneakers' style={{ textDecoration: 'none'}}>
-                <ConnexionButton>Ajouter des sneakers</ConnexionButton>
+                <ConnexionButton>Administration</ConnexionButton>
             </Link>
             :
             null
             }
             <Link to = '/' style={{ textDecoration: 'none'}}>
-                <ConnexionButton onClick={logout}>Deconnexion</ConnexionButton>
+                <ConnexionButton onClick={logout}>Log Out</ConnexionButton>
             </Link>
-        </LogContainer>
-        :
-        <LogContainer>
-            <Link to = '/login' style={{ textDecoration: 'none'}}>
-                <ConnexionButton>Login</ConnexionButton>
-            </Link>
-            <Link to = '/register' style={{ textDecoration: 'none'}}>
-                <ConnexionButton>Register</ConnexionButton>
-            </Link>
-        </LogContainer>
-        }
-        <Link to = '/' style={{ textDecoration: 'none'}}>
+            <Link to = '/Cart' style={{ textDecoration: 'none'}}>
             <PanierButton>
                 <BulleCart>
                     {cart.length}
@@ -107,6 +100,17 @@ const NavBar = () => {
                 <img style={{width:'40px'}} src={panier}/>
             </PanierButton>
         </Link>
+        </LogContainer>
+        :
+        <LogContainer>
+            <Link to = '/login' style={{ textDecoration: 'none'}}>
+                <ConnexionButton>Log In</ConnexionButton>
+            </Link>
+            <Link to = '/register' style={{ textDecoration: 'none'}}>
+                <ConnexionButton>Register</ConnexionButton>
+            </Link>
+        </LogContainer>
+        }
     </BtnContainer>
 </Container>
 }

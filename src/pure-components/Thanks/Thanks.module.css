@@ -1,0 +1,14 @@
+.ThanksContainer{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ThanksText{
+    font-size: 30px;
+    padding : 30px;
+    font-weight: 400;
+}

@@ -1,0 +1,108 @@
+.Container{
+    width : 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.CartContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.ProductCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    border-bottom: solid black 1px;
+}
+
+.ProductIMG{
+    width: 20%;
+}
+
+.Add{
+    width: 20px;
+    text-align: center;
+}
+
+.Add:hover{
+    cursor: pointer;
+}
+
+.Remove:hover{
+    cursor: pointer;
+}
+
+.Remove{
+    width: 20px;
+    text-align: center;
+}
+
+.Quantity{
+    display: flex;
+
+}
+
+.TotalCount{
+    width: 100%;
+    padding : 5%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.NameAndPriceContainer{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.PaymentInfoContainer{
+    width: 30%;
+    height : 25vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding : 20px;
+}
+
+.infoProductContainer{
+    display: flex;
+    align-items: center;
+}
+
+.EmptyCartContainer{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EmptyCartText{
+    padding: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.PaypalBTN{
+    width: 60%;
+    margin: 20px;
+    padding : 20px;
+    background-color: black;
+    color:white;
+    transition: all 0.7s ease;
+}
+
+.PaypalBTN:hover{
+    background-color: white;
+    color:black;
+    cursor: pointer;
+}

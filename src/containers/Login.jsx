@@ -14,7 +14,7 @@ const formData = [
     },
     {
         text: "Mot de passe",
-        type: "text",
+        type: "password",
         key: "mdp"
     }
 ]
@@ -35,7 +35,7 @@ const Login = () => {
                 }
             })
             .then((response) => {
-                if(response.data){
+                if(response.data[0]){
                     localStorage.setItem('User',response.data[0].UserID);
                     localStorage.setItem('Admin',response.data[0].admin);
                     localStorage.setItem('Name',response.data[0].UserFirstName);
